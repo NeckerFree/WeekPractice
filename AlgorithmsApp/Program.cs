@@ -5,5 +5,7 @@
 //Console.WriteLine(string.Join(" ", array));
 using AlgorithmsApp;
 
-StackEx se=new StackEx();
+//StackEx se=new StackEx();
+
+QueueEx queueEx = new QueueEx();
 
