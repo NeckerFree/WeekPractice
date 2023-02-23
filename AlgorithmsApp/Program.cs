@@ -7,5 +7,7 @@ using AlgorithmsApp;
 
 //StackEx se=new StackEx();
 
-QueueEx queueEx = new QueueEx();
+//QueueEx queueEx = new QueueEx();
+
+LinkedListEx linkedListEx=new LinkedListEx();
 
