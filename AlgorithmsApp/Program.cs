@@ -13,5 +13,7 @@ using AlgorithmsApp;
 
 //HashtableEx hashtableEx = new HashtableEx();
 
-BinarySearchEx binarySearchEx = new BinarySearchEx();
+//BinarySearchEx binarySearchEx = new BinarySearchEx();
+
+SortedListEx sortedListEx = new SortedListEx();
 
