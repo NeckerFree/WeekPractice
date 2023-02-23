@@ -11,5 +11,7 @@ using AlgorithmsApp;
 
 //LinkedListEx linkedListEx=new LinkedListEx();
 
-HashtableEx hashtableEx = new HashtableEx();
+//HashtableEx hashtableEx = new HashtableEx();
+
+BinarySearchEx binarySearchEx = new BinarySearchEx();
 
