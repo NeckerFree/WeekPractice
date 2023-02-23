@@ -9,5 +9,7 @@ using AlgorithmsApp;
 
 //QueueEx queueEx = new QueueEx();
 
-LinkedListEx linkedListEx=new LinkedListEx();
+//LinkedListEx linkedListEx=new LinkedListEx();
+
+HashtableEx hashtableEx = new HashtableEx();
 
