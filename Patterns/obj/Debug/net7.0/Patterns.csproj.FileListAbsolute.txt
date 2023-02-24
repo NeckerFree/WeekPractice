@@ -1,0 +1,12 @@
+C:\Elio\Development\Projects\WeekPractice\Patterns\bin\Debug\net7.0\Patterns.deps.json
+C:\Elio\Development\Projects\WeekPractice\Patterns\bin\Debug\net7.0\Patterns.dll
+C:\Elio\Development\Projects\WeekPractice\Patterns\bin\Debug\net7.0\Patterns.pdb
+C:\Elio\Development\Projects\WeekPractice\Patterns\obj\Debug\net7.0\Patterns.csproj.AssemblyReference.cache
+C:\Elio\Development\Projects\WeekPractice\Patterns\obj\Debug\net7.0\Patterns.GeneratedMSBuildEditorConfig.editorconfig
+C:\Elio\Development\Projects\WeekPractice\Patterns\obj\Debug\net7.0\Patterns.AssemblyInfoInputs.cache
+C:\Elio\Development\Projects\WeekPractice\Patterns\obj\Debug\net7.0\Patterns.AssemblyInfo.cs
+C:\Elio\Development\Projects\WeekPractice\Patterns\obj\Debug\net7.0\Patterns.csproj.CoreCompileInputs.cache
+C:\Elio\Development\Projects\WeekPractice\Patterns\obj\Debug\net7.0\Patterns.dll
+C:\Elio\Development\Projects\WeekPractice\Patterns\obj\Debug\net7.0\refint\Patterns.dll
+C:\Elio\Development\Projects\WeekPractice\Patterns\obj\Debug\net7.0\Patterns.pdb
+C:\Elio\Development\Projects\WeekPractice\Patterns\obj\Debug\net7.0\ref\Patterns.dll

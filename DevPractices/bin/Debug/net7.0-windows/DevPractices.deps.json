@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "DevPractices/1.0.0": {
+        "dependencies": {
+          "Patterns": "1.0.0"
+        },
+        "runtime": {
+          "DevPractices.dll": {}
+        }
+      },
+      "Patterns/1.0.0": {
+        "runtime": {
+          "Patterns.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DevPractices/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Patterns/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
