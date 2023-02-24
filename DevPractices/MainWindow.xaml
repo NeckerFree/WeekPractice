@@ -1,0 +1,25 @@
+﻿<Window x:Class="DevPractices.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DevPractices"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="900">
+    <Grid>
+        <DockPanel >
+            <GroupBox Header="Algorithms" DockPanel.Dock="Top" Height="215" >
+                <Button x:Name="ButtonQS" Content="Quick Sort" HorizontalAlignment="Left" VerticalAlignment="Top" Click="ButtonQS_Click"/>
+            </GroupBox>
+            <GroupBox x:Name="GroupPatterns" Header="Patterns" DockPanel.Dock="Bottom" Height="210" >
+                <DockPanel LastChildFill="False">
+                    <GroupBox Header="Creational" Width=                              "300">
+                        <Button x:Name="ButtonAbstract" Content="Abstract Factory" HorizontalAlignment="Left" VerticalAlignment="Top" Click="ButtonAbstract_Click"/>
+                    </GroupBox>
+                    <GroupBox Header="Structural" Width=                              "300"/>
+                    <GroupBox Header="Behavioral" DockPanel.Dock="Right" Width=                              "300"/>
+                </DockPanel>
+            </GroupBox>
+        </DockPanel>
+    </Grid>
+</Window>
