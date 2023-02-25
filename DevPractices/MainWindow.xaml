@@ -12,10 +12,14 @@
                 <Button x:Name="ButtonQS" Content="Quick Sort" HorizontalAlignment="Left" VerticalAlignment="Top" Click="ButtonQS_Click"/>
             </GroupBox>
             <GroupBox x:Name="GroupPatterns" Header="Patterns" DockPanel.Dock="Bottom" Height="210" >
-                <DockPanel LastChildFill="False">
-                    <GroupBox Header="Creational" Width=                              "300">
-                        <Button x:Name="ButtonAbstract" Content="Abstract Factory" HorizontalAlignment="Left" VerticalAlignment="Top" Click="ButtonAbstract_Click"/>
-                    </GroupBox>
+                <DockPanel >
+                    <GroupBox x:Name="GBPatterns" Header="Creational" Width=                              "300">
+                        <StackPanel>
+                            <Button Name="ButtonAbstrct" Click="ButtonAbstract_Click">Abstract Factory</Button>
+                        <Button Name="ButtonSingleton" Click="ButtonSingleton_Click" >Singleton</Button>
+                   
+                        </StackPanel>
+                         </GroupBox>
                     <GroupBox Header="Structural" Width=                              "300"/>
                     <GroupBox Header="Behavioral" DockPanel.Dock="Right" Width=                              "300"/>
                 </DockPanel>

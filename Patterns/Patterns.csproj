@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Singleton\Interfaces\" />
+  </ItemGroup>
+
 </Project>

@@ -17,6 +17,7 @@ using System.Windows.Shapes;
 using Patterns.AbstractFactory.Implementations.Dotnet;
 using Patterns.AbstractFactory.Interfaces;
 using Patterns.AbstractFactory.Implementations.RoR;
+using Patterns.Singleton.Implementations;
 
 namespace DevPractices
 {
@@ -51,6 +52,20 @@ namespace DevPractices
             var back = roRFactory.CreateBackend();
             var db = roRFactory.CreateDataBase();
             MessageBox.Show($"Created factory: {roRFactory.ToString()}, front:{front.ToString()}, back: {back.ToString()}, db: {db.ToString()}");
+        }
+
+        private void ButtonSingleton_Click(object sender, RoutedEventArgs e)
+        {
+            Singleton singleton = Singleton.GetInstance();
+            Singleton newSingleton = Singleton.GetInstance();
+            if (singleton == newSingleton) {
+                MessageBox.Show("Same Instance");
+             }
+            else
+            {
+                MessageBox.Show("Not Working");
+            }
+
         }
     }
 }
