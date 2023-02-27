@@ -17,7 +17,7 @@
                         <StackPanel>
                             <Button Name="ButtonAbstrct" Click="ButtonAbstract_Click">Abstract Factory</Button>
                         <Button Name="ButtonSingleton" Click="ButtonSingleton_Click" >Singleton</Button>
-                   
+                            <Button Name="ButtonPrototype" Click="ButtonPrototype_Click">Prototype</Button>
                         </StackPanel>
                          </GroupBox>
                     <GroupBox Header="Structural" Width=                              "300"/>
