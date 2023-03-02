@@ -15,6 +15,7 @@ namespace AlgorithmsApp
             var element = stack.Pop();
             Console.WriteLine(element);
             stack.Push("fourth");
+            stack.Peek();
             Console.WriteLine($"Size: {stack.Count}");
             foreach (var item in stack)
             {

@@ -32,5 +32,38 @@
 //singleLinkedList.Print(singleLinkedList.head);
 
 
+//using AlgorithmsApp;
+
+//LinkedListCol<string> ll = new LinkedListCol<string>();
+//ll.Add("First");
+//ll.Add("Second");
+//ll.Add("Third");
+//ll.Add("Fouth");
+//ll.Remove("Second");
+//var response= ll.Contains("First");
+//var response2 = ll.Contains("Second");
+//var cant = ll.Count;
+
+//foreach (string word in ll)
+//{
+//    Console.WriteLine(word);
+//}
+
+//ll.Clear();
+
+//using AlgorithmsApp.Inheritance;
+
+//Transport transport = new Transport();
+//Airplane airplane = new Airplane();
+//Transport airplaneAsTransport = new Airplane();
+
+//transport.Move(); // Transport - Move 
+//transport.Carry(); // Transport - Carry
+//airplane.Move(); // Airplane - Move 
+//airplane.Carry(); // Airplane - Carry
+//airplaneAsTransport.Move(); // Airplane - Move 
+//airplaneAsTransport.Carry(); // Transport - Carry
+
+
 
 
