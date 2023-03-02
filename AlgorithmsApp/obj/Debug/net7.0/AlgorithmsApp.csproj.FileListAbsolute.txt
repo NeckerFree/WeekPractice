@@ -10,6 +10,3 @@ C:\Elio\Development\Projects\WeekPractice\AlgorithmsApp\obj\Debug\net7.0\Algorit
 C:\Elio\Development\Projects\WeekPractice\AlgorithmsApp\obj\Debug\net7.0\refint\AlgorithmsApp.dll
 C:\Elio\Development\Projects\WeekPractice\AlgorithmsApp\obj\Debug\net7.0\AlgorithmsApp.pdb
 C:\Elio\Development\Projects\WeekPractice\AlgorithmsApp\obj\Debug\net7.0\ref\AlgorithmsApp.dll
-C:\Elio\Development\Projects\WeekPractice\AlgorithmsApp\bin\Debug\net7.0\AlgorithmsApp.exe
-C:\Elio\Development\Projects\WeekPractice\AlgorithmsApp\bin\Debug\net7.0\AlgorithmsApp.runtimeconfig.json
-C:\Elio\Development\Projects\WeekPractice\AlgorithmsApp\obj\Debug\net7.0\AlgorithmsApp.genruntimeconfig.cache
