@@ -32,13 +32,13 @@ namespace TestProject
             stack.Push(66);
             stack.Push(55);
             stack.Push(44);
-            stack.Push(33); 
+            stack.Push(33);
             stack.Push(22);
             stack.Push(11);
             stack.Push(00);
             var element = stack.Pop();
             //Console.WriteLine(element);
-            
+
             //Console.WriteLine(peek);
 
             stack.Pop();
@@ -48,7 +48,7 @@ namespace TestProject
             stack.Push(100);
             int peek = stack.Peek();
             //Console.WriteLine($"Size: {stack.Count}");
-            string result= stack.Print();
+            string result = stack.Print();
             Assert.Equal("99 88 77 66 55 44 100 ", result);
         }
 
@@ -68,6 +68,30 @@ namespace TestProject
             string actual = queue.Print();
             Assert.Equal("Three Four Five Six Seven ", actual);
 
+        }
+        [Fact]
+        public void ValidateBinarySearch()
+        {
+            BinSearchEx binSearch = new BinSearchEx();
+            int key = 4;
+            int[] myArray = { 1, 2, 3, 4, 5 };
+            int position = binSearch.BinarySearchAlg(myArray, 0, myArray.Length, key);
+            Assert.Equal(3, position);
+        }
+
+        [Theory]
+        [InlineData(0, 0)]
+        [InlineData(10, 5)]
+        [InlineData(34, 17)]
+        [InlineData(50, 25)]
+        [InlineData(100, -1)]
+        public void ValidateSearchInBigArray(int key, int position)
+        {
+            BinSearchEx binSearch = new BinSearchEx();
+
+            int[] myArray = { 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50 };
+            int actual = binSearch.BinarySearchAlg(myArray, 0, myArray.Length, key);
+            Assert.Equal(position, actual);
         }
     }
 }
