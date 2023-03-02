@@ -5,11 +5,13 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlgorithmsApp", "AlgorithmsApp\AlgorithmsApp.csproj", "{AC168D9A-AEB6-4290-8C5A-9FC9CD84A199}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevPractices", "DevPractices\DevPractices.csproj", "{C0F67D15-589F-4837-998E-AAFE1856268E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevPractices", "DevPractices\DevPractices.csproj", "{C0F67D15-589F-4837-998E-AAFE1856268E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{51B6C905-61EC-46D5-8BC6-AD9D4FCF0562}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Patterns", "Patterns\Patterns.csproj", "{408F1600-3419-4F65-A8DE-91C38CCA205C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Patterns", "Patterns\Patterns.csproj", "{408F1600-3419-4F65-A8DE-91C38CCA205C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject", "TestProject\TestProject.csproj", "{9E173569-BC54-4CC2-943E-AF50D7632DE0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +31,10 @@ Global
 		{408F1600-3419-4F65-A8DE-91C38CCA205C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{408F1600-3419-4F65-A8DE-91C38CCA205C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{408F1600-3419-4F65-A8DE-91C38CCA205C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E173569-BC54-4CC2-943E-AF50D7632DE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E173569-BC54-4CC2-943E-AF50D7632DE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E173569-BC54-4CC2-943E-AF50D7632DE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E173569-BC54-4CC2-943E-AF50D7632DE0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
