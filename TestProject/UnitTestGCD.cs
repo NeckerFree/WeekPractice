@@ -93,5 +93,15 @@ namespace TestProject
             int actual = binSearch.BinarySearchAlg(myArray, 0, myArray.Length, key);
             Assert.Equal(position, actual);
         }
+
+        [Theory]
+        [InlineData(0, "")]
+        [InlineData(1990, "MCMXC")] 
+        public void ConvertIntToRoman(int num, string roman)
+        {
+            string equivalence = num.ToRoman();
+            Assert.Equal(roman, equivalence);
+            
+        }
     }
 }
