@@ -4,14 +4,14 @@
     {
         public static string ToRoman(this int value)
         {
-            string[] m = { "", "M", "MM", "MMM" };
-            string[] c = { "", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM" };
-            string[] x = { "", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC" };
-            string[] u = { "", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX" };
-            string thousands = m[(int)Math.Floor((double)value / 1000)];
-            string hundreds = c[(int)Math.Floor(((double)value % 1000) / 100)];
-            string tens = x[(int)Math.Floor(((double)value % 100) / 10)];
-            string units = u[value % 10];
+            string[] arrayThousands = { "", "M", "MM", "MMM" };
+            string[] arrayHundreds = { "", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM" };
+            string[] arrayTens = { "", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC" };
+            string[] arrayUnits = { "", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX" };
+            string thousands = arrayThousands[(int)Math.Floor((double)value / 1000)];
+            string hundreds = arrayHundreds[(int)Math.Floor(((double)value % 1000) / 100)];
+            string tens = arrayTens[(int)Math.Floor(((double)value % 100) / 10)];
+            string units = arrayUnits[value % 10];
             return thousands + hundreds + tens + units;
         }
     }
