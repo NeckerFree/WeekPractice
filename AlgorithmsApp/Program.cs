@@ -64,6 +64,13 @@
 //airplaneAsTransport.Move(); // Airplane - Move 
 //airplaneAsTransport.Carry(); // Transport - Carry
 
-
+using AlgorithmsApp.Classes;
+int times = Recursion.Calculate(100, 765,true);
+//int times = Recursion.Calculate(100000, 456669);
+//int times = Recursion.Calculate(567, 768);
+//int times = Recursion.Calculate(5, 4);
+//int times = Recursion.Calculate(32, 45);
+Console.WriteLine($"executed times: {times}");
+Console.ReadKey();
 
 
