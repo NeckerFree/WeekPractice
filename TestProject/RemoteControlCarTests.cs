@@ -13,12 +13,14 @@ namespace TestProject
         public void Validate()
         {
 
-            int speed = 5;
-            int batteryDrain = 1;
+            int speed = 3;
+            int batteryDrain = 20;
             var car = new RemoteControlCar(speed, batteryDrain);
-             car.Drive();
-            var dd = car.DistanceDriven();
-            Assert.Equal(5, dd);
-                    }
+            int distance = 16;
+            var race = new RaceTrack(distance);
+            var can = race.TryFinishTrack(car);
+            Assert.False(can);
+
+        }
     }
 }
