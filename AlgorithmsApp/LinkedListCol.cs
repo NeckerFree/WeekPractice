@@ -44,7 +44,10 @@ namespace AlgorithmsApp
                 Count++;
                 return true;
             }
-            nodeColToAdd = new NodeCol<T>(element, Tail);
+            if (Tail != null)
+            {
+                nodeColToAdd = new NodeCol<T>(element, Tail);
+            }
             Tail = nodeColToAdd;
             Count++;
             return true;
@@ -56,21 +59,28 @@ namespace AlgorithmsApp
             NodeCol<T>? nodeBeforeFound = null;
             if (element == null) return false;
             if (Count == 0) return false;
-            
-            while (!Equals(currentNode.Value, element))
+            if (currentNode != null)
             {
-                nodeBeforeFound = currentNode;
-                if (currentNode == null) return false;
-                currentNode = currentNode.NextNode;
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
+                while (!Equals(currentNode.Value, element))
+                {
+                    nodeBeforeFound = currentNode;
+                    if (currentNode == null) return false;
+                    currentNode = currentNode.NextNode;
+                }
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
+
+                if (currentNode == Head)
+                {
+                    Head = currentNode.NextNode;
+                    Count--;
+                    return true;
+                }
+                if (nodeBeforeFound != null)
+                {
+                    nodeBeforeFound.NextNode = currentNode.NextNode;
+                }
             }
-            
-            if (currentNode == Head)
-            {
-                Head = currentNode.NextNode;
-                Count--;
-                return true;
-            }
-            nodeBeforeFound.NextNode = currentNode.NextNode;
             Count--;
             return true;
 
