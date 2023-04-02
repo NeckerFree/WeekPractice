@@ -5,21 +5,23 @@ namespace DevPractices.Classes
 {
     public class RemoteControlCar
     {
-        private static int _speed;
-        private static double _batteryDrain;
+        public int _speed;
+        public double _batteryDrain;
 
         public int meters;
-        public static double battery = 100;
+        public static double battery;
 
         public RemoteControlCar(int speed, int batteryDrain)
         {
             _speed = speed;
             _batteryDrain = batteryDrain;
+            battery = 100;
+            meters = 0;
         }
 
         public bool BatteryDrained()
         {
-            return (battery == 0);
+            return (battery < _batteryDrain);
         }
 
         public int DistanceDriven()
@@ -38,7 +40,7 @@ namespace DevPractices.Classes
 
         public static RemoteControlCar Nitro()
         {
-            return new RemoteControlCar(50, (int)(battery * 0.04));
+            return new RemoteControlCar(50, 4);
         }
     }
 
@@ -55,8 +57,10 @@ namespace DevPractices.Classes
 
         public bool TryFinishTrack(RemoteControlCar car)
         {
-          bool canFinish=!  car.BatteryDrained();
-            return canFinish;
+            double drivesToComplete = distance / (double)car._speed;
+            double batteryToConsum = (car._batteryDrain * drivesToComplete);
+            return batteryToConsum <= 100;
+
         }
     }
 
