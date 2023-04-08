@@ -1,83 +1,62 @@
+using AlgorithmsApp.CoderPad.Implementation;
+using DevPractices.CoderPad;
 using DevPractices.CoderPad.Implementation;
 using DevPractices.CoderPad.Interfaces;
 using DevPractices.Implementation;
-using NUnitLite;
-using System.ComponentModel.DataAnnotations;
-using System.Reflection;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Drawing;
+using Assert = NUnit.Framework.Assert;
 
 namespace NUnitTestProject
 {
+    [TestFixture]
     public class ParkingLotTests
     {
-        //public static int Main(string[] args)
-        //{
-        //    return new AutoRun(Assembly.GetCallingAssembly()).Execute(new String[] { "--labels=All" });
-        //}
+        IServiceParking iServiceParking = null;
 
-        [TestFixture]
-        public class Dog
+        private const int _COMPACK_PARKING_SLOTS = 7;
+        private const int _REGULAR_PARKING_SLOTS = 5;
+        private const int _LARGE_PARKING_SLOTS = 3;
+
+        [SetUp]
+        public void Initialize()
         {
-            public String Bark()
+            iServiceParking=new ServiceParking(_COMPACK_PARKING_SLOTS, _REGULAR_PARKING_SLOTS, _LARGE_PARKING_SLOTS);  
+              for (int i = 0; i < 6; i++)
             {
-                return "bark";
-            }
-
-            [Test]
-            public void TestBarker()
-            {
-                Dog dog = new Dog();
-                string actual = dog.Bark();
-                Assert.That(actual, Is.EqualTo("bark"));
-            }
-
-            [Test]
-            public void ValidateAvailableSpots()
-            {
-                IParkingLot parkingLot = new ParkingLot(10, 12, 5);
-                int availableSpots = parkingLot.RemainingSpots();
-                Assert.Equals(availableSpots, 27);
-            }
-            [Test]
-
-            public void ValidateAssignParkingCar()
-            {
-                ParkingLot parkingLot = new ParkingLot(10, 12, 5);
-                parkingLot.AddSpot(new Car { Color = "Red", OwnerName = "Elio", Plate = "AXD345" }); 
-                int cars=parkingLot.RemainingSpots();
-                Assert.Equals(cars, 26);
-            }
-            [Test]
-            public void ValidateAssignParkingVan() {
-                ParkingLot parkingLot = new ParkingLot(10, 12, 5);
-                parkingLot.AddSpot(new Van { Color = "Yellow", OwnerName = "Matias", Plate = "FRG564" });
-                int spots = parkingLot.RemainingSpots();
-                Assert.Equals(spots, 24);
+                Vehicle vehicle = new Vehicle() { Color = Color.Red, OwnerName = "Elio"+ i, Plate = "ABC"+i,  VehicleType = VehicleType.Motorcycle };
+                Ticket ticket = iServiceParking.AddSpot(vehicle);
             }
 
         }
-    }
-}
-
-
-/*
- public class Prueba{
-        public static string Bark()
+        [TearDown]
+        public void Cleanup()
         {
-            return "Bark";
+            iServiceParking = null;
         }
-}
-public class Runner {
-    public static int Main(string[] args) {
-        return new AutoRun(Assembly.GetCallingAssembly()).Execute(new String[] {"--labels=All"});
-    }
-
-    [TestFixture]
-    public class Validate {
+        public void ValidateCollectionInitialize()
+        {
+            int remaining = iServiceParking.RemainingSpots();
+            Assert.That(remaining, Is.EqualTo(_COMPACK_PARKING_SLOTS));
+        }
         [Test]
-        public void TestBarker() {
-            string response=Prueba.Bark();
-            Assert.AreEqual("Bark", response);
+        public void ValidateAssignMoto()
+        {
+            Vehicle vehicle = new Vehicle() { Color = Color.Red, OwnerName = "Elio" , Plate = "ABC" , VehicleType = VehicleType.Motorcycle };
+            Ticket ticket = iServiceParking.AddSpot(vehicle);
+            int total = iServiceParking.TotalSpots();
+            Assert.That(total, Is.EqualTo(_COMPACK_PARKING_SLOTS));
+            bool isFull= iServiceParking.IsFull();
+            Assert.That(isFull, Is.True);
         }
+        [Test]
+        public void ValidateRemoveSpot()
+        {
+            Ticket? ticket = iServiceParking.ReleaseSpot(0);
+            bool isEmpty = iServiceParking.IsEmpty();
+            Assert.IsTrue(isEmpty);
+        }
+
     }
 }
-*/
+
