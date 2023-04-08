@@ -11,7 +11,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Patterns", "Patterns\Patterns.csproj", "{408F1600-3419-4F65-A8DE-91C38CCA205C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject", "TestProject\TestProject.csproj", "{9E173569-BC54-4CC2-943E-AF50D7632DE0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestProject", "TestProject\TestProject.csproj", "{9E173569-BC54-4CC2-943E-AF50D7632DE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitTestProject", "NUnitTestProject\NUnitTestProject.csproj", "{482A8D0F-0883-4215-AB29-E9497169DE2C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +37,10 @@ Global
 		{9E173569-BC54-4CC2-943E-AF50D7632DE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E173569-BC54-4CC2-943E-AF50D7632DE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E173569-BC54-4CC2-943E-AF50D7632DE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{482A8D0F-0883-4215-AB29-E9497169DE2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{482A8D0F-0883-4215-AB29-E9497169DE2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{482A8D0F-0883-4215-AB29-E9497169DE2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{482A8D0F-0883-4215-AB29-E9497169DE2C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

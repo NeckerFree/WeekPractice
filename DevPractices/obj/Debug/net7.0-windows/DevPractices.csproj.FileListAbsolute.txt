@@ -1,9 +1,11 @@
+C:\Elio\Development\Projects\WeekPractice\DevPractices\obj\Debug\net7.0-windows\DevPractices.csproj.AssemblyReference.cache
 C:\Elio\Development\Projects\WeekPractice\DevPractices\bin\Debug\net7.0-windows\DevPractices.exe
 C:\Elio\Development\Projects\WeekPractice\DevPractices\bin\Debug\net7.0-windows\DevPractices.deps.json
 C:\Elio\Development\Projects\WeekPractice\DevPractices\bin\Debug\net7.0-windows\DevPractices.runtimeconfig.json
 C:\Elio\Development\Projects\WeekPractice\DevPractices\bin\Debug\net7.0-windows\DevPractices.dll
 C:\Elio\Development\Projects\WeekPractice\DevPractices\bin\Debug\net7.0-windows\DevPractices.pdb
-C:\Elio\Development\Projects\WeekPractice\DevPractices\obj\Debug\net7.0-windows\DevPractices.csproj.AssemblyReference.cache
+C:\Elio\Development\Projects\WeekPractice\DevPractices\bin\Debug\net7.0-windows\Patterns.dll
+C:\Elio\Development\Projects\WeekPractice\DevPractices\bin\Debug\net7.0-windows\Patterns.pdb
 C:\Elio\Development\Projects\WeekPractice\DevPractices\obj\Debug\net7.0-windows\MainWindow.g.cs
 C:\Elio\Development\Projects\WeekPractice\DevPractices\obj\Debug\net7.0-windows\App.g.cs
 C:\Elio\Development\Projects\WeekPractice\DevPractices\obj\Debug\net7.0-windows\DevPractices_MarkupCompile.cache
@@ -14,11 +16,9 @@ C:\Elio\Development\Projects\WeekPractice\DevPractices\obj\Debug\net7.0-windows\
 C:\Elio\Development\Projects\WeekPractice\DevPractices\obj\Debug\net7.0-windows\DevPractices.AssemblyInfoInputs.cache
 C:\Elio\Development\Projects\WeekPractice\DevPractices\obj\Debug\net7.0-windows\DevPractices.AssemblyInfo.cs
 C:\Elio\Development\Projects\WeekPractice\DevPractices\obj\Debug\net7.0-windows\DevPractices.csproj.CoreCompileInputs.cache
+C:\Elio\Development\Projects\WeekPractice\DevPractices\obj\Debug\net7.0-windows\DevPractices.csproj.CopyComplete
 C:\Elio\Development\Projects\WeekPractice\DevPractices\obj\Debug\net7.0-windows\DevPractices.dll
 C:\Elio\Development\Projects\WeekPractice\DevPractices\obj\Debug\net7.0-windows\refint\DevPractices.dll
 C:\Elio\Development\Projects\WeekPractice\DevPractices\obj\Debug\net7.0-windows\DevPractices.pdb
 C:\Elio\Development\Projects\WeekPractice\DevPractices\obj\Debug\net7.0-windows\DevPractices.genruntimeconfig.cache
 C:\Elio\Development\Projects\WeekPractice\DevPractices\obj\Debug\net7.0-windows\ref\DevPractices.dll
-C:\Elio\Development\Projects\WeekPractice\DevPractices\bin\Debug\net7.0-windows\Patterns.dll
-C:\Elio\Development\Projects\WeekPractice\DevPractices\bin\Debug\net7.0-windows\Patterns.pdb
-C:\Elio\Development\Projects\WeekPractice\DevPractices\obj\Debug\net7.0-windows\DevPractices.csproj.CopyComplete
