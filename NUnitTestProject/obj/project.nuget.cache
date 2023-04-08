@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "gVfardg/MRp2I4JLU2FaEihsnYGn12ikmIJdp5eLZU261vriFgCNNJikdycg2Z6N3aSPjuHxCNts6NKsZEe8ZA==",
+  "dgSpecHash": "V09qK7/lgULOJ8efkPr4UFAGPmVpEz2OKoHDh8LpPn+9gIUlaTbddxF+qb4mQ9DMsyeR9vZtvhChfvOlaZZoUA==",
   "success": true,
   "projectFilePath": "C:\\Elio\\Development\\Projects\\WeekPractice\\NUnitTestProject\\NUnitTestProject.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\elio_\\.nuget\\packages\\microsoft.testplatform.objectmodel\\17.3.2\\microsoft.testplatform.objectmodel.17.3.2.nupkg.sha512",
     "C:\\Users\\elio_\\.nuget\\packages\\microsoft.testplatform.testhost\\17.3.2\\microsoft.testplatform.testhost.17.3.2.nupkg.sha512",
+    "C:\\Users\\elio_\\.nuget\\packages\\mstest.testframework\\3.0.2\\mstest.testframework.3.0.2.nupkg.sha512",
     "C:\\Users\\elio_\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",
     "C:\\Users\\elio_\\.nuget\\packages\\newtonsoft.json\\9.0.1\\newtonsoft.json.9.0.1.nupkg.sha512",
     "C:\\Users\\elio_\\.nuget\\packages\\nuget.frameworks\\5.11.0\\nuget.frameworks.5.11.0.nupkg.sha512",

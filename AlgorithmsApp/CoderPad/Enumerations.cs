@@ -2,15 +2,15 @@
 {
     public enum SpotType
     {
-        Motorcycle,
+        Compack,
         Car,
         Large
     }
 
-    //public enum VehicleType
-    //{
-    //    Motorcycle,
-    //    Car,
-    //    Van
-    //}
+    public enum VehicleType
+    {
+        Motorcycle,
+        Car,
+        Van
+    }
 }

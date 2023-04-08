@@ -1,99 +1,67 @@
-﻿using DevPractices.CoderPad;
+﻿using AlgorithmsApp.CoderPad.Implementation;
+using DevPractices.CoderPad;
 using DevPractices.CoderPad.Implementation;
-using DevPractices.CoderPad.Interfaces;
 
 namespace DevPractices.Implementation
 {
-    public class ParkingLot : IParkingLot
+    internal abstract class ParkingLot
     {
-        private CompactSpot[] compactSpots;
-        private RegularSpot[] regularSpots;
-        private LargeSpot[] largeSpots;
-        private int _vansCount;
-        private int _carsCount;
-        private int _motosCount;
+        internal Dictionary<int, Spot> spotsCollection;
+        private int _spotsCount;
 
-        public ParkingLot(int motos, int cars, int vans)
+        public ParkingLot(int quantity)
         {
-            this.compactSpots = new CompactSpot[motos];
-            this.regularSpots = new RegularSpot[cars];
-            this.largeSpots = new LargeSpot[vans];
+            spotsCollection = new Dictionary<int, Spot>(quantity);
+        }
+        public virtual Ticket AddSpot(Vehicle vehicle)
+        {
+            Ticket ticket = new Ticket();
+            if (spotsCollection is not null && vehicle != null)
+            {
+                Spot spot = new Spot() { Number = _spotsCount, Vehicle = vehicle };
+                spotsCollection[_spotsCount++] = spot;
+                ticket.Generate(spot);
+            }
+            return ticket;
         }
 
-        public void AddSpot(Vehicle vehicle)
+        public virtual Ticket? ReleaseSpot(int spotId)
         {
-            var vehicleType=vehicle.GetType();
-            if (vehicleType == typeof(Moto))
+            Ticket ticket = new Ticket();
+            Spot spot = spotsCollection[spotId];
+
+            if (spot != null)
             {
-                CompactSpot compactSpot = new CompactSpot()
-                {
-                    Number = _motosCount,
-                    Vehicle = (Moto)vehicle
-                };
-                this.compactSpots[_motosCount++]=compactSpot;
+                spotsCollection.Remove(spotId);
+                _spotsCount--;
+                ticket.Generate(spot);
             }
-            if (vehicleType == typeof(Car))
-            {
-                RegularSpot regularSpot = new RegularSpot()
-                {
-                    Number = _carsCount,
-                    Vehicle = (Car)vehicle
-                };
-                this.regularSpots[_carsCount++] = regularSpot;
-            }
-            if (vehicleType == typeof(Van))
-            {
-                LargeSpot largeSpot = new LargeSpot()
-                {
-                    Number = _vansCount,
-                    Vehicle = (Van)vehicle
-                };
-                this.largeSpots[_vansCount++] = largeSpot;
-                this.largeSpots[_vansCount++] = largeSpot;
-                this.largeSpots[_vansCount++] = largeSpot;
-            }
+            return ticket;
         }
         public bool IsEmpty()
         {
-            return (_motosCount == 0 && _carsCount == 0 && _vansCount == 0);
+            return (_spotsCount == 0);
         }
 
         public bool IsFull()
         {
-            return (_motosCount == this.compactSpots.Length &&
-                _carsCount == this.regularSpots.Length &&
-                _vansCount == this.largeSpots.Length);
-        }
-
-        public bool IsFullSpotType(SpotType spotType)
-        {
-            switch (spotType)
-            {
-                case SpotType.Motorcycle: return (_motosCount == this.compactSpots.Length);
-                case SpotType.Car: return (_carsCount == this.regularSpots.Length);
-                case SpotType.Large: return (_vansCount == this.largeSpots.Length);
-                default: return false;
-            }
+            bool response = (spotsCollection is null) ? false : (_spotsCount == spotsCollection.Count);
+            return response;
         }
 
         public int RemainingSpots()
         {
-            int availableSpots =
-                (this.compactSpots.Length - _motosCount) +
-                 (this.regularSpots.Length - _carsCount) +
-                  (this.largeSpots.Length - _vansCount);
-            return availableSpots;
-        }
+            int result = (spotsCollection is null) ? -1 : (spotsCollection.Count - _spotsCount);
+            return result;
 
-        public int SpotsVansTaken()
-        {
-            return _vansCount;
         }
 
         public int TotalSpots()
         {
-            int totalSpots = (this.compactSpots.Length + this.regularSpots.Length + this.largeSpots.Length);
-            return totalSpots;
+            int result = (spotsCollection is null) ? -1 : spotsCollection.Count;
+            return result;
         }
+
+
     }
 }
