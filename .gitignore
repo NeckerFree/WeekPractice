@@ -12,3 +12,10 @@
 /DevPractices/obj/Debug/net7.0-windows/DevPractices_mgpf0k4i_wpftmp.AssemblyInfoInputs.cache
 /DevPractices/obj/Debug/net7.0-windows/DevPractices_mgpf0k4i_wpftmp.assets.cache
 /DevPractices/obj/Debug/net7.0-windows/DevPractices_mgpf0k4i_wpftmp.GeneratedMSBuildEditorConfig.editorconfig
+/.vs/ProjectEvaluation/weekpractice.metadata.v6.1
+/.vs/ProjectEvaluation/weekpractice.projects.v6.1
+/.vs/WeekPractice/DesignTimeBuild/.dtbcache.v2
+/.vs/WeekPractice/v17/.futdcache.v2
+/.vs/WeekPractice/v17/.suo
+*.testlog
+/NUnitTestProject/obj/Debug/net7.0/NUnitTestProject.csproj.AssemblyReference.cache
