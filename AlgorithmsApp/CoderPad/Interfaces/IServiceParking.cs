@@ -1,4 +1,7 @@
-﻿namespace DevPractices.CoderPad.Interfaces
+﻿using AlgorithmsApp.CoderPad.Implementation;
+using DevPractices.CoderPad.Implementation;
+
+namespace DevPractices.CoderPad.Interfaces
 {
     //Hey candidate! Welcome to your interview.Boilerplate
     //is provided.
@@ -28,7 +31,7 @@
     //Assumptions:
     //a van ocupes one large spot or 3 regular spot
     // 
-    public interface IParkingLot
+    public interface IServiceParking
     {
         public int RemainingSpots();
         public int TotalSpots();
@@ -36,6 +39,7 @@
         public bool IsEmpty();
         public bool IsFullSpotType(SpotType spotType);
         public int SpotsVansTaken();
-
+        public Ticket AddSpot(Vehicle vehicle);
+        public Ticket ReleaseSpot(int spotId);
     }
 }
