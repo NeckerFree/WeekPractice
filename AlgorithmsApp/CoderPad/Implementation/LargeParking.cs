@@ -11,11 +11,8 @@ namespace DevPractices.Implementation
 
         public override Ticket AddSpot(Vehicle vehicle)
         {
-            throw new NotImplementedException();
+            return base.AddSpot(vehicle);
         }
-        //public override void Initialize(int quantity)
-        //{
-        //    base.Initialize(quantity);
-        //}
+        
     }
 }

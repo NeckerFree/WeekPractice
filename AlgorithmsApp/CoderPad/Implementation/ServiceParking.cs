@@ -56,10 +56,13 @@ namespace AlgorithmsApp.CoderPad.Implementation
                     {
                         throw new InvalidOperationException("All parking slots for Moto are full");
                     }
+                    else
                     ticket = largeParkingLot.AddSpot(vehicle);
                 }
+                else
                 ticket = regularParkingLot.AddSpot(vehicle);
             }
+            else
             ticket = compackParkingLot.AddSpot(vehicle);
             return ticket;
         }
