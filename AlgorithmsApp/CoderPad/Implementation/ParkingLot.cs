@@ -8,9 +8,10 @@ namespace DevPractices.Implementation
     {
         internal Dictionary<int, Spot> spotsCollection;
         private int _spotsCount;
-
+        private int _quantity;
         public ParkingLot(int quantity)
         {
+            _quantity = quantity;
             spotsCollection = new Dictionary<int, Spot>(quantity);
         }
         public virtual Ticket AddSpot(Vehicle vehicle)
@@ -45,13 +46,13 @@ namespace DevPractices.Implementation
 
         public bool IsFull()
         {
-            bool response = (spotsCollection is null) ? false : (_spotsCount == spotsCollection.Count);
+            bool response = (spotsCollection is null) ? false : (_quantity == spotsCollection.Count);
             return response;
         }
 
         public int RemainingSpots()
         {
-            int result = (spotsCollection is null) ? -1 : (spotsCollection.Count - _spotsCount);
+            int result = (spotsCollection is null) ? -1 : (_quantity - spotsCollection.Count);
             return result;
 
         }

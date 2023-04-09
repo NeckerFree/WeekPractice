@@ -5,9 +5,6 @@ C:\Elio\Development\Projects\WeekPractice\NUnitTestProject\obj\Debug\net7.0\NUni
 C:\Elio\Development\Projects\WeekPractice\NUnitTestProject\obj\Debug\net7.0\NUnitTestProject.AssemblyInfo.cs
 C:\Elio\Development\Projects\WeekPractice\NUnitTestProject\obj\Debug\net7.0\NUnitTestProject.csproj.CoreCompileInputs.cache
 C:\Elio\Development\Projects\WeekPractice\NUnitTestProject\bin\Debug\net7.0\testhost.dll
-C:\Elio\Development\Projects\WeekPractice\NUnitTestProject\bin\Debug\net7.0\AlgorithmsApp.deps.json
-C:\Elio\Development\Projects\WeekPractice\NUnitTestProject\bin\Debug\net7.0\AlgorithmsApp.runtimeconfig.json
-C:\Elio\Development\Projects\WeekPractice\NUnitTestProject\bin\Debug\net7.0\AlgorithmsApp.exe
 C:\Elio\Development\Projects\WeekPractice\NUnitTestProject\bin\Debug\net7.0\testhost.exe
 C:\Elio\Development\Projects\WeekPractice\NUnitTestProject\bin\Debug\net7.0\NUnit3.TestAdapter.dll
 C:\Elio\Development\Projects\WeekPractice\NUnitTestProject\bin\Debug\net7.0\NUnit3.TestAdapter.pdb
