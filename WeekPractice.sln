@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Patterns", "Patterns\Patter
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestProject", "TestProject\TestProject.csproj", "{9E173569-BC54-4CC2-943E-AF50D7632DE0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitTestProject", "NUnitTestProject\NUnitTestProject.csproj", "{482A8D0F-0883-4215-AB29-E9497169DE2C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NUnitTestProject", "NUnitTestProject\NUnitTestProject.csproj", "{482A8D0F-0883-4215-AB29-E9497169DE2C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

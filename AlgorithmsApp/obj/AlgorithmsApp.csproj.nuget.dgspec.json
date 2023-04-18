@@ -43,6 +43,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[9.0.1, )"
+            },
             "System.Collections.NonGeneric": {
               "target": "Package",
               "version": "[4.3.0, )"

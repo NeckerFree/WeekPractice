@@ -100,6 +100,3 @@ C:\Elio\Development\Projects\WeekPractice\TestProject\obj\Debug\net7.0\refint\Te
 C:\Elio\Development\Projects\WeekPractice\TestProject\obj\Debug\net7.0\TestProject.pdb
 C:\Elio\Development\Projects\WeekPractice\TestProject\obj\Debug\net7.0\TestProject.genruntimeconfig.cache
 C:\Elio\Development\Projects\WeekPractice\TestProject\obj\Debug\net7.0\ref\TestProject.dll
-C:\Elio\Development\Projects\WeekPractice\TestProject\bin\Debug\net7.0\AlgorithmsApp.deps.json
-C:\Elio\Development\Projects\WeekPractice\TestProject\bin\Debug\net7.0\AlgorithmsApp.runtimeconfig.json
-C:\Elio\Development\Projects\WeekPractice\TestProject\bin\Debug\net7.0\AlgorithmsApp.exe
