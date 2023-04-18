@@ -22,3 +22,4 @@ C:\Elio\Development\Projects\WeekPractice\DevPractices\obj\Debug\net7.0-windows\
 C:\Elio\Development\Projects\WeekPractice\DevPractices\obj\Debug\net7.0-windows\DevPractices.pdb
 C:\Elio\Development\Projects\WeekPractice\DevPractices\obj\Debug\net7.0-windows\DevPractices.genruntimeconfig.cache
 C:\Elio\Development\Projects\WeekPractice\DevPractices\obj\Debug\net7.0-windows\ref\DevPractices.dll
+C:\Elio\Development\Projects\WeekPractice\DevPractices\bin\Debug\net7.0-windows\Newtonsoft.Json.dll
