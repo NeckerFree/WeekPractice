@@ -45,5 +45,20 @@ namespace AlgorithmsApp.Fundamentals
         {
             throw new NotImplementedException();
         }
+
+        public int CalculateSpeed(float kilometers, float hours, int acceleration)
+        {
+            throw new NotImplementedException();
+        }
+
+        public int CalculateSpeed(float kilometers, out float hours)
+        {
+            throw new NotImplementedException();
+        }
+
+        public int CalculateSpeed(out float kilometers, float hours)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
