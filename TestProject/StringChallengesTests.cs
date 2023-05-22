@@ -22,7 +22,7 @@ namespace TestProject
         public void ValidateUniqueChars(string input, string expected)
         {
             StringChallenges stringChallenges = new StringChallenges();
-          string actual=  stringChallenges.GetUniques(input);
+            string actual = stringChallenges.GetUniques(input);
             Assert.Equal(expected, actual);
         }
 
@@ -32,6 +32,34 @@ namespace TestProject
         {
             StringChallenges stringChallenges = new StringChallenges();
             bool actual = stringChallenges.HasUniques(input);
+            Assert.Equal(expected, actual);
+        }
+        [Theory]
+        [InlineData("Parangaricutirimicuaro", 8)]
+        public void ValidateLengthOfLongestSubstring(string input, int expected)
+        {
+            StringChallenges stringChallenges = new StringChallenges();
+            int actual = stringChallenges.LengthOfLongestSubstring(input);
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void ValidateLongestCommonPrefix()
+        {
+            string[] strs = { "flower", "flow", "flight" };
+            string expected = "fl";
+            StringChallenges stringChallenges = new StringChallenges();
+            string actual = stringChallenges.LongestCommonPrefix(strs);
+            Assert.Equal(expected, actual);
+        }
+        
+        [Fact]
+        public void ValidateLongestCommonPrefixOne()
+        {
+            string[] strs = { "aa", "aa" };
+            string expected = "aa";
+            StringChallenges stringChallenges = new StringChallenges();
+            string actual = stringChallenges.LongestCommonPrefix(strs);
             Assert.Equal(expected, actual);
         }
     }

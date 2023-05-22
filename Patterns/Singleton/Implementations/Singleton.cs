@@ -22,5 +22,6 @@ namespace Patterns.Singleton.Implementations
         {
              Console.WriteLine("Working");
         }
+        
     }
 }

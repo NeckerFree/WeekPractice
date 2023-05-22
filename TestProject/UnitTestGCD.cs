@@ -96,12 +96,22 @@ namespace TestProject
 
         [Theory]
         [InlineData(0, "")]
-        [InlineData(1990, "MCMXC")] 
+        [InlineData(1990, "MCMXC")]
         public void ConvertIntToRoman(int num, string roman)
         {
-            string equivalence = num.ToRoman();
+            string equivalence = num.IntToRoman();
             Assert.Equal(roman, equivalence);
-            
+
+        }
+
+        [Theory]
+        //[InlineData("", 0)]
+        [InlineData("MCMXC", 1990)]
+        public void ConvertRomanToInt(string roman, int num)
+        {
+            int equivalence = RomanNumeralExtension.RomanToInt(roman);
+            Assert.Equal(num, equivalence);
+
         }
     }
 }

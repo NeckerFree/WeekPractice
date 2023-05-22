@@ -80,5 +80,70 @@ namespace AlgorithmsApp.String
             }
             return response;
         }
+        public int LengthOfLongestSubstring(string s)
+        {
+            string result = string.Empty;
+            if (s.Length == 0) return 0;
+            Dictionary<char, int> map = new Dictionary<char, int>();
+            int max = 0;
+            for (int i = 0, j = 0; i < s.Length; ++i)
+            {
+                if (map.ContainsKey(s[i]))
+                {
+                    j = Math.Max(j, map[s[i]] + 1);
+                    map.Remove(s[i]);
+                }
+                map.Add(s[i], i);
+                max = Math.Max(max, i - j + 1);
+            }
+            return max;
+        }
+
+        public string LongestCommonPrefix(string[] strs)
+        {
+            string prefix = string.Empty;
+            if (strs.Length==0 ) return prefix;
+            Dictionary<char, int> map = new Dictionary<char, int>();
+            int indexLetter = -1;
+            string response = string.Empty;
+            while (true)
+            {
+                char car = '*';
+                indexLetter++;
+                for (int indexWord = 0; indexWord < strs.Length; indexWord++)
+                {
+                    if (strs[indexWord]=="")
+                    {
+                        return prefix;
+                    }
+                    if (strs[indexWord].Length ==indexLetter)
+                    {
+                        return response;
+                    }
+                    car = strs[indexWord][indexLetter];
+                    if (map.ContainsKey(car))
+                    {
+                        map[car] = map[car] + 1;
+                    }
+                    else
+                    {
+                        map.Add(car, 1);
+                    }
+
+                }
+
+                if (map[car] == strs.Length)
+                {
+                    response += car;
+                    map[car] = 0;
+                }
+                else
+                {
+                    prefix = response;
+                    break;
+                }
+            }
+            return prefix;
+        }
     }
 }
