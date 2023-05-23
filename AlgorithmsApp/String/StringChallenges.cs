@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Xml;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace AlgorithmsApp.String
 {
@@ -102,7 +104,7 @@ namespace AlgorithmsApp.String
         public string LongestCommonPrefix(string[] strs)
         {
             string prefix = string.Empty;
-            if (strs.Length==0 ) return prefix;
+            if (strs.Length == 0) return prefix;
             Dictionary<char, int> map = new Dictionary<char, int>();
             int indexLetter = -1;
             string response = string.Empty;
@@ -112,11 +114,11 @@ namespace AlgorithmsApp.String
                 indexLetter++;
                 for (int indexWord = 0; indexWord < strs.Length; indexWord++)
                 {
-                    if (strs[indexWord]=="")
+                    if (strs[indexWord] == "")
                     {
                         return prefix;
                     }
-                    if (strs[indexWord].Length ==indexLetter)
+                    if (strs[indexWord].Length == indexLetter)
                     {
                         return response;
                     }
@@ -145,5 +147,91 @@ namespace AlgorithmsApp.String
             }
             return prefix;
         }
+
+        public IList<string> LetterCombinations(string digits)
+        {
+            List<string> combinations = new List<string>();
+            Dictionary<char, int> map = new Dictionary<char, int>();
+            int baseAscii = 90;
+            int[] values = new int[digits.Length];
+
+            if (digits == string.Empty)
+            {
+                return combinations;
+            }
+            else
+            {
+                combinations.Add(string.Empty);
+            }
+
+            for (int i = 0; i < digits.Length; i++)
+            {
+                int number = int.Parse(digits[i].ToString());
+                values[i] = number;
+                if (!map.ContainsValue(number))
+                {
+                    int step = (number < 8) ? (3 * number) + 1 : (3 * number) + 2;
+                    map.Add((char)(baseAscii + step), number);
+                    map.Add((char)(baseAscii + ++step), number);
+                    map.Add((char)(baseAscii + ++step), number);
+                    if (number == 7 || number == 9)
+                    {
+                        map.Add((char)(baseAscii + ++step), number);
+                    }
+                }
+            }
+
+
+            for (int i = 0; i < values.Length; i++)
+            {
+
+                combinations = combinations.
+                    SelectMany(x => map.Where(pair => pair.Value == values[i]).
+                    Select(pair => pair.Key).
+                    Select(y => $"{x}{y}")).
+                    ToList();
+            }
+            return combinations;
+        }
+
+        public IList<string> LetterCombinationsIA(string digits)
+        {
+            if (string.IsNullOrEmpty(digits))
+            {
+                return new List<string>();
+            }
+            Dictionary<char, string> digitToLetters = new Dictionary<char, string>
+    {
+        { '2', "abc" },
+        { '3', "def" },
+        { '4', "ghi" },
+        { '5', "jkl" },
+        { '6', "mno" },
+        { '7', "pqrs" },
+        { '8', "tuv" },
+        { '9', "wxyz" }
+    };
+
+            List<string> combinations = new List<string> { "" };
+
+            foreach (char digit in digits)
+            {
+                if (digitToLetters.TryGetValue(digit, out var letters))
+                {
+                    List<string> newCombinations = new List<string>();
+                    foreach (string combination in combinations)
+                    {
+                        foreach (char letter in letters)
+                        {
+                            newCombinations.Add(combination + letter);
+                        }
+                    }
+                    combinations = newCombinations;
+                }
+            }
+
+            return combinations;
+        }
+
     }
 }
