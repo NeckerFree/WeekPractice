@@ -52,7 +52,7 @@ namespace TestProject
             string actual = stringChallenges.LongestCommonPrefix(strs);
             Assert.Equal(expected, actual);
         }
-        
+
         [Fact]
         public void ValidateLongestCommonPrefixOne()
         {
@@ -60,6 +60,16 @@ namespace TestProject
             string expected = "aa";
             StringChallenges stringChallenges = new StringChallenges();
             string actual = stringChallenges.LongestCommonPrefix(strs);
+            Assert.Equal(expected, actual);
+        }
+        [Theory]
+        [InlineData("23", new string[] { "ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf" })]
+        [InlineData("22", new string[] { "aa", "ab", "ac", "ba", "bb", "bc", "ca", "cb", "cc" })]
+        
+        public void ValidateLetterCombinations(string input, string[] expected)
+        {
+            StringChallenges stringChallenges = new StringChallenges();
+            IList<string> actual = stringChallenges.LetterCombinations(input);
             Assert.Equal(expected, actual);
         }
     }
