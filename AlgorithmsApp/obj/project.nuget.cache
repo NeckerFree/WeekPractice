@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "8TUphYhSI9Ol3om2ld8ulHW564FsQmQvYBPk+srVWyWK+5zAEbfU9MGwMJ/is5rXu66hySEpL/NlLA1GQUvB/Q==",
+  "dgSpecHash": "EO9lpetz6l68ZtwuQVGKlz37C5rGEh78FoAQ2JAJALv6xvzrM0BZc1J2TSOOqufx4+jOEq2qHxrrTs/H2JgGbw==",
   "success": true,
   "projectFilePath": "C:\\Elio\\Development\\Projects\\WeekPractice\\AlgorithmsApp\\AlgorithmsApp.csproj",
   "expectedPackageFiles": [
@@ -40,7 +40,10 @@
     "C:\\Users\\elio_\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.threading.tasks.extensions\\4.0.0\\system.threading.tasks.extensions.4.0.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.readerwriter\\4.0.11\\system.xml.readerwriter.4.0.11.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xdocument\\4.0.11\\system.xml.xdocument.4.0.11.nupkg.sha512"
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xdocument\\4.0.11\\system.xml.xdocument.4.0.11.nupkg.sha512",
+    "C:\\Users\\elio_\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.2\\microsoft.windowsdesktop.app.ref.7.0.2.nupkg.sha512",
+    "C:\\Users\\elio_\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.2\\microsoft.netcore.app.ref.7.0.2.nupkg.sha512",
+    "C:\\Users\\elio_\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.2\\microsoft.aspnetcore.app.ref.7.0.2.nupkg.sha512"
   ],
   "logs": []
 }
