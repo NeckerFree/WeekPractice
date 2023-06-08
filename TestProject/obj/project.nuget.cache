@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "3Egxp0kDdC0DbHs0RVyqbkP+ynNO/br05TOkg79RDyyNj2fyQuIuT0CVeurCKqaa7XK22WMWwCJOyIRJwukPog==",
+  "dgSpecHash": "Rfl2KflDCDfMhGRKWa0GBF2S9UcchuJ1fGEEqupGKCIZP8MqbB2PwVxlSg/GKJBaUGrdve6rcUksSliDWFUMNQ==",
   "success": true,
   "projectFilePath": "C:\\Elio\\Development\\Projects\\WeekPractice\\TestProject\\TestProject.csproj",
   "expectedPackageFiles": [
@@ -96,7 +96,10 @@
     "C:\\Users\\elio_\\.nuget\\packages\\xunit.core\\2.4.2\\xunit.core.2.4.2.nupkg.sha512",
     "C:\\Users\\elio_\\.nuget\\packages\\xunit.extensibility.core\\2.4.2\\xunit.extensibility.core.2.4.2.nupkg.sha512",
     "C:\\Users\\elio_\\.nuget\\packages\\xunit.extensibility.execution\\2.4.2\\xunit.extensibility.execution.2.4.2.nupkg.sha512",
-    "C:\\Users\\elio_\\.nuget\\packages\\xunit.runner.visualstudio\\2.4.5\\xunit.runner.visualstudio.2.4.5.nupkg.sha512"
+    "C:\\Users\\elio_\\.nuget\\packages\\xunit.runner.visualstudio\\2.4.5\\xunit.runner.visualstudio.2.4.5.nupkg.sha512",
+    "C:\\Users\\elio_\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.2\\microsoft.windowsdesktop.app.ref.7.0.2.nupkg.sha512",
+    "C:\\Users\\elio_\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.2\\microsoft.netcore.app.ref.7.0.2.nupkg.sha512",
+    "C:\\Users\\elio_\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.2\\microsoft.aspnetcore.app.ref.7.0.2.nupkg.sha512"
   ],
   "logs": []
 }

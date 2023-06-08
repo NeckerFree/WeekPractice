@@ -65,11 +65,22 @@ namespace TestProject
         [Theory]
         [InlineData("23", new string[] { "ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf" })]
         [InlineData("22", new string[] { "aa", "ab", "ac", "ba", "bb", "bc", "ca", "cb", "cc" })]
-        
+
         public void ValidateLetterCombinations(string input, string[] expected)
         {
             StringChallenges stringChallenges = new StringChallenges();
             IList<string> actual = stringChallenges.LetterCombinations(input);
+            Assert.Equal(expected, actual);
+        }
+        [Theory]
+        [InlineData("sadbutsad", "sad", 0)]
+        [InlineData("leetcode", "leeto", -1)]
+        [InlineData("a", "a", 0)]
+        [InlineData("abc", "c", 2)]
+        public void ValidateFirstOccurrence(string haystack, string needle, int expected)
+        {
+            StringChallenges stringChallenges = new StringChallenges();
+          int actual=  stringChallenges.CalculateFirstOcurrence(haystack, needle);
             Assert.Equal(expected, actual);
         }
     }
