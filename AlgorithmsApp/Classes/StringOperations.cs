@@ -1,4 +1,6 @@
-﻿namespace AlgorithmsApp.Classes
+﻿using System.Collections.Generic;
+
+namespace AlgorithmsApp.Classes
 {
     public class StringOperations
     {
@@ -14,3 +16,5 @@
         }
     }
 }
+
+
