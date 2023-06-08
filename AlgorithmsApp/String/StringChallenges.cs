@@ -232,6 +232,21 @@ namespace AlgorithmsApp.String
 
             return combinations;
         }
-
+        public int CalculateFirstOcurrence(string haystack, string needle)
+        {
+            if (haystack.Length == needle.Length)
+            {
+                return (haystack == needle) ? 0 : -1;
+            }
+            for (int i = 0; i < haystack.Length ; i++)
+            {
+                if (i + needle.Length <= haystack.Length)
+                {
+                    string coincidence = haystack.Substring(i, needle.Length);
+                    if (coincidence == needle) return i;
+                }
+            }
+            return -1;
+        }
     }
 }
