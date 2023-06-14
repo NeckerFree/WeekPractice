@@ -1,4 +1,4 @@
-﻿namespace AlgorithmsApp
+﻿namespace AlgorithmsApp.LinkedList
 {
     public interface ILinkedListCol<T>
     {

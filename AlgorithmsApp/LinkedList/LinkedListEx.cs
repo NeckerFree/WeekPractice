@@ -1,7 +1,7 @@
 ﻿
 using System.Collections.Generic;
 
-namespace AlgorithmsApp
+namespace AlgorithmsApp.LinkedList
 {
     internal class LinkedListEx
     {
@@ -12,7 +12,7 @@ namespace AlgorithmsApp
             ll.AddLast("Fifth");
             ll.RemoveFirst();
             ll.Remove("Third");
-            LinkedListNode<string> recent= ll.AddLast("Seventh");
+            LinkedListNode<string> recent = ll.AddLast("Seventh");
             ll.AddBefore(recent, "Sixth");
 
             foreach (string word in ll)
