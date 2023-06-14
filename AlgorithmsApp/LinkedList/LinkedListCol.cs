@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace AlgorithmsApp
+namespace AlgorithmsApp.LinkedList
 {
     public class LinkedListCol<T> : ILinkedListCol<T>, IEnumerable
     {
