@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AlgorithmsApp.BigNumbers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,7 +15,7 @@ namespace AlgorithmsApp.LinkedList
             ListNode l2Reversed = ReverseList(l2);
             string value1 = RecoverValues(l1Reversed);
             string value2 = RecoverValues(l2Reversed);
-            string sum = SumChars(value1, value2);
+            string sum =BigNumbersOperations.Sum(value1, value2);
             var result = sum.Reverse<char>().ToList();
             ListNode head = new ListNode(int.Parse(result[0].ToString()));
             ListNode current = head;
@@ -49,36 +50,6 @@ namespace AlgorithmsApp.LinkedList
 
             return response.ToString();
         }
-        private static string SumChars(string value1, string value2)
-        {
-            int length = Math.Max(value1.Length, value2.Length);
-            int remainder = 0;
-            string result = "";
-
-            for (int i = 0; i < length; i++)
-            {
-                int sum = remainder;
-                int index1 = value1.Length - i - 1;
-                if (index1 >= 0)
-                {
-                    sum += value1[index1] - '0';
-                }
-                int index2 = value2.Length - i - 1;
-                if (index2 >= 0)
-                {
-                    sum += value2[index2] - '0';
-                }
-                remainder = sum / 10;
-                int valueToStore = sum % 10;
-                result = valueToStore.ToString() + result;
-            }
-
-            if (remainder > 0)
-            {
-                result = remainder.ToString() + result;
-            }
-
-            return result;
-        }
+        
     }
 }
