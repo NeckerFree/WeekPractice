@@ -238,7 +238,7 @@ namespace AlgorithmsApp.String
             {
                 return (haystack == needle) ? 0 : -1;
             }
-            for (int i = 0; i < haystack.Length ; i++)
+            for (int i = 0; i < haystack.Length; i++)
             {
                 if (i + needle.Length <= haystack.Length)
                 {
@@ -247,6 +247,42 @@ namespace AlgorithmsApp.String
                 }
             }
             return -1;
+        }
+
+        public string DefangIPaddr(string address)
+        {
+            string result = string.Empty;
+            string[] parts = address.Split('.');
+            for (int i = 0; i < parts.Length - 1; i++)
+            {
+                result += $"{parts[i]}[.]";
+            }
+            result += parts[parts.Length - 1];
+            return result;
+        }
+
+        public int MaxProfit(int[] prices)
+        {
+            if (prices.Length == 1) return 0;
+            int minPosition = 0;
+            int min = prices[minPosition];
+            int profit = prices[1] - min;
+            for (int i = 1; i < prices.Length - 1; i++)
+            {
+                int currentTest = prices[i];
+                if (currentTest < min)
+                {
+                    min = currentTest;
+                    minPosition = i;
+                }
+                    int maxTest = prices[i + 1];
+                if (maxTest-min > profit)
+                {
+                    profit = maxTest - min;
+                }
+            }
+
+            return (profit>0) ? profit : 0;
         }
     }
 }
