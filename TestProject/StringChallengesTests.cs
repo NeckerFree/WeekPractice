@@ -80,7 +80,25 @@ namespace TestProject
         public void ValidateFirstOccurrence(string haystack, string needle, int expected)
         {
             StringChallenges stringChallenges = new StringChallenges();
-          int actual=  stringChallenges.CalculateFirstOcurrence(haystack, needle);
+            int actual = stringChallenges.CalculateFirstOcurrence(haystack, needle);
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void ValidateDefangIPaddr()
+        {
+            StringChallenges stringChallenges = new StringChallenges();
+            string actual = stringChallenges.DefangIPaddr("1.1.1.1");
+            Assert.Equal("1[.]1[.]1[.]1", actual);
+        }
+
+        [Theory]
+        [InlineData(new int[] { 7, 1, 5, 3, 6, 4 }, 5)]
+        [InlineData(new int[] { 7, 6, 4, 3, 1 }, 0)]
+        public void CalculateMaxProfit(int[] input, int expected)
+        {
+            StringChallenges stringChallenges = new StringChallenges();
+            int actual = stringChallenges.MaxProfit(input);
             Assert.Equal(expected, actual);
         }
     }
