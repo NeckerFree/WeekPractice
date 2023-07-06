@@ -52,59 +52,44 @@ namespace AlgorithmsApp.String
         public static IList<IList<int>> ThreeSum(int[] nums)
         {
             Array.Sort(nums);
-            Dictionary<int, int> dict = new Dictionary<int, int>();
-            foreach (int num in nums)
-            {
-                if (dict.ContainsKey(num))
-                {
-                    if (dict[num] < 3)
-                    {
-                        dict[num]++;
-                    }
-
-                }
-                else
-                {
-                    dict[num] = 1;
-                }
-            }
-            List<int> listInts = new List<int>();
-            foreach (var item in dict)
-            {
-                listInts.AddRange(Enumerable.Repeat(item.Key, item.Value).ToArray());
-            }
             List<(int, int, int)> triplets = new List<(int, int, int)>();
-            int[] filtered = listInts.ToArray();
-            
-            if (filtered.Length < 3) return new List<IList<int>>();
-            else
+
+            for (int i = 0; i < nums.Length - 2; i++)
             {
-                for (int i = 0; i < filtered.Length - 2; i++)
+                if (i > 0 && nums[i] == nums[i - 1])
+                    continue;
+
+                int left = i + 1;
+                int right = nums.Length - 1;
+
+                while (left < right)
                 {
-                    for (int j = i + 1; j < filtered.Length - 1; j++)
+                    int sum = nums[i] + nums[left] + nums[right];
+
+                    if (sum == 0)
                     {
-                       for (int k = j + 1; k < filtered.Length; k++)
-                        {
-                            if (filtered[k] > 0 - (filtered[i] + filtered[j]))
-                            {
-                                break;
-                            }
-                            if (filtered[k] + filtered[i] + filtered[j] == 0)
-                            {
-                                (int, int, int) sequence = (filtered[i], filtered[j], filtered[k]);
-                                if (triplets.Contains(sequence) == false)
-                                {
-                                    triplets.Add(sequence);
-                                }
+                        triplets.Add((nums[i], nums[left], nums[right]));
 
-                            }
-                        }
+                        while (left < right && nums[left] == nums[left + 1])
+                            left++;
+                        while (left < right && nums[right] == nums[right - 1])
+                            right--;
 
+                        left++;
+                        right--;
+                    }
+                    else if (sum < 0)
+                    {
+                        left++;
+                    }
+                    else
+                    {
+                        right--;
                     }
                 }
             }
 
-            return ConvertToList(triplets); ;
+            return ConvertToList(triplets);
         }
 
         private static IList<IList<int>> ConvertToList(List<(int, int, int)> triplets)
